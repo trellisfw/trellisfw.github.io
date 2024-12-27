@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg 
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    x="0px" y="0px"
+    viewBox="0 0 250 80"
+    xml:space="preserve">
+  <!-- 
+    A stylized "Trellis" wordmark with a simple garden trellis shape 
+    behind the "T" to represent data flow. 
+  -->
+  <style>
+    .trellis-green { fill: #2a9d54; }
+    .trellis-dark { fill: #227944; }
+  </style>
+
+  <!-- Trellis shape behind the T (abstract lattice) -->
+  <g transform="translate(10, 5)">
+    <rect x="0" y="0" width="5" height="70" fill="#9bcf9e"/>
+    <rect x="15" y="0" width="5" height="70" fill="#9bcf9e"/>
+    <rect x="0" y="15" width="20" height="5" fill="#9bcf9e"/>
+    <rect x="0" y="35" width="20" height="5" fill="#9bcf9e"/>
+    <rect x="0" y="55" width="20" height="5" fill="#9bcf9e"/>
+  </g>
+
+  <!-- "Trellis" text -->
+  <text x="40" y="50" font-family="Arial, sans-serif" font-size="50" fill="#2a9d54">
+    Trellis
+  </text>
+</svg>

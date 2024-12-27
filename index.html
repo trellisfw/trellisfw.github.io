@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trellis – Sovereign Automated Data Sharing</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <header class="navbar">
+    <div class="logo-container">
+      <!-- Logo image -->
+      <img src="logo.svg" alt="Trellis Logo" class="logo"/>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#open-source">Open Source</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Trellis</h1>
+      <p class="tagline">
+        Empowering Agriculture and Food Supply Chains<br/>
+        with Private, Automated Data Flow
+      </p>
+      <a href="#features" class="cta-button">Learn More</a>
+    </div>
+    <!-- Hero illustration image -->
+    <div class="hero-illustration">
+      <img width="500px" src="trellis-metallic.webp" alt="Trellis for supporting produce and data exchange"/>
+    </div>
+  </section>
+
+  <!-- FEATURES SECTION -->
+  <section id="features" class="features">
+    <h2>Key Features</h2>
+    <div class="feature-cards">
+      <div class="feature-card">
+        <h3>Standardized API</h3>
+        <p>
+          Trellis defines a common specification for how conformant
+          platforms provide and consume data, tailored to fresh
+          produce & supply chains.
+        </p>
+      </div>
+      <div class="feature-card">
+        <h3>Privacy & Permissions</h3>
+        <p>
+          Sensitive information is only shared with authorized
+          partners. You control who sees what, every step of the way.
+        </p>
+      </div>
+      <div class="feature-card">
+        <h3>Not Centralized</h3>
+        <p>
+          Data flows <strong>directly</strong> between participants—
+          no central server storing all your data. Keep ownership
+          firmly in your control.
+        </p>
+      </div>
+      <div class="feature-card">
+        <h3>Automatic Synchronization</h3>
+        <p>
+          Whenever produce data changes in your Trellis-conformant
+          system, authorized partners see updates instantly.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS SECTION -->
+  <section id="how-it-works" class="how-it-works">
+    <h2>How It Works</h2>
+    <ol class="how-list">
+      <li>
+        <strong>Adopt the Trellis API:</strong> Implement our 
+        specification to provide & request data in a uniform format. 
+        (Reference implementation: <a href="https://github.com/oada/server" target="_blank">OADA Server</a>)
+      </li>
+      <li>
+        <strong>Permissions First:</strong> Request and grant data access 
+        through Trellis’s robust permissioning model—companies see only 
+        what you allow.
+      </li>
+      <li>
+        <strong>Run Anywhere:</strong> Use Docker or Kubernetes to run your 
+        own Trellis instance (OADA-based) on-premises or in the cloud.
+      </li>
+      <li>
+        <strong>Real-Time Sync:</strong> Changes in your system are instantly 
+        reflected in the systems of your authorized network, creating a live 
+        produce data ecosystem.
+      </li>
+    </ol>
+    <div class="paper-link">
+      <p>
+        Learn more about the vision behind Trellis in our paper:
+        <br/>
+        <a href="https://doi.org/10.1002/agj2.21007?_ga=2.112951559.286312726.1735315247-223363030.1735315247" target="_blank">
+          “Ag Data Sharing: Tools in the Technological Toolbox and Implementation in the OADA Framework”
+        </a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- OPEN SOURCE SECTION -->
+  <section id="open-source" class="open-source">
+    <h2>Open Source</h2>
+    <p>
+      Trellis is built on open-source principles to foster collaboration
+      and transparency. 
+    </p>
+    <p>
+      <a href="https://github.com/trellisfw" target="_blank" class="github-link">
+        <!-- Inline GitHub icon (SVG) -->
+        <svg 
+          class="github-icon" 
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg" 
+          aria-hidden="true">
+          <path fill-rule="evenodd" fill="#333" d="M8 0C3.58 0 0 3.73 0 8.34c0 3.69 2.39 6.81 5.7 7.92.42.08.57-.19.57-.42
+            0-.21-.02-.9-.02-1.64-1.99.37-2.53-.87-2.69-1.67-.09-.23-.48-.93-.82-1.12-.28-.15-.68-.52-.02-.53.63-.01
+            1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.54.28-.87.51-1.07-1.77-.21-3.64-.92-3.64-4.06
+            0-.9.3-1.64.82-2.21-.08-.21-.36-1.06.08-2.21 0 0 .67-.22 2.2.84.64-.18 1.33-.27 2.01-.27.69
+            0 1.37.09 2.01.27 1.53-1.06 2.2-.84 2.2-.84.44 1.15.16 2 .08 2.21.51.57.82 1.31.82
+            2.21 0 3.15-1.88 3.85-3.65 4.06.29.26.54.76.54 1.54 0 1.11-.02 2-.02 2.27 0 .23.15.5.57.42
+            3.31-1.11 5.7-4.23 5.7-7.92C16 3.73 12.42 0 8 0z"/>
+        </svg>
+        Visit Us on GitHub
+      </a>
+    </p>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact">
+    <h2>Get Involved</h2>
+    <p class="contact-text">
+      Questions about Trellis or want to integrate it into your supply chain?
+      Contact us for support or collaboration opportunities.
+    </p>
+    <p>
+      <a href="mailto:info@trellis.one" class="contact-button">Email Us</a>
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© <span id="year"></span> Trellis. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Dynamically set the current year in the footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

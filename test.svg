@@ -1,0 +1,64 @@
+<svg 
+    version="1.1"
+    width="200"
+    height="200"
+    viewBox="0 0 200 200"
+    xmlns="http://www.w3.org/2000/svg">
+
+  <title>Trellis Framework Logo</title>
+  
+  <defs>
+    <!-- A linear gradient for the trellis lines -->
+    <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4CAF50" />
+      <stop offset="100%" stop-color="#2196F3" />
+    </linearGradient>
+
+    <!-- A radial gradient for the intersection circles -->
+    <radialGradient id="circleGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#BBDEFB"/>
+      <stop offset="100%" stop-color="#2196F3"/>
+    </radialGradient>
+
+    <!-- A diamond-shaped pattern that repeats -->
+    <pattern 
+      id="diamondPattern"
+      patternUnits="userSpaceOnUse"
+      width="40"
+      height="40"
+      patternTransform="rotate(45 20 20)">
+      
+      <!-- Horizontal line (in pattern coords) -->
+      <line 
+        x1="0" y1="20" 
+        x2="40" y2="20"
+        stroke="url(#lineGradient)" 
+        stroke-width="2" 
+        stroke-linecap="round" />
+
+      <!-- Vertical line (in pattern coords) -->
+      <line 
+        x1="20" y1="0" 
+        x2="20" y2="40"
+        stroke="url(#lineGradient)" 
+        stroke-width="2" 
+        stroke-linecap="round" />
+
+      <!-- Intersection node (center of pattern) -->
+      <circle 
+        cx="20" 
+        cy="20" 
+        r="4" 
+        fill="url(#circleGradient)" />
+    </pattern>
+  </defs>
+
+  <!-- Fill the entire logo area with the diamond (trellis) pattern -->
+  <rect 
+    x="0" 
+    y="0" 
+    width="200" 
+    height="200" 
+    fill="url(#diamondPattern)"
+  />
+</svg>

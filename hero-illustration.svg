@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  width="600"
+  height="350"
+  viewBox="0 0 600 350"
+  xmlns="http://www.w3.org/2000/svg"
+  xml:space="preserve">
+
+  <!--
+    Static, "techy" trellis hero:
+    - Soft green background gradient
+    - Trellis lines
+    - A "data comet" path across some nodes, with a bright white-to-transparent stroke
+    - Metallic node circles (larger and flashy)
+  -->
+
+  <!-- ==================== DEFINITIONS ==================== -->
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#daf5d1"/>
+      <stop offset="100%" stop-color="#f6fff2"/>
+    </linearGradient>
+
+    <!-- Metallic gradient for node circles -->
+    <radialGradient
+      id="metallicGradient"
+      cx="0.5" cy="0.5" r="0.5"
+      gradientTransform="rotate(45)">
+      <stop offset="0%"   stop-color="#fefefe"/>
+      <stop offset="25%"  stop-color="#dddddd"/>
+      <stop offset="50%"  stop-color="#f7f7f7"/>
+      <stop offset="75%"  stop-color="#cccccc"/>
+      <stop offset="100%" stop-color="#666666"/>
+    </radialGradient>
+
+    <!-- White-to-transparent gradient for the "comet" stroke.
+         We'll use userSpaceOnUse so the gradient spans the path in actual coordinates. -->
+    <linearGradient
+      id="cometStroke"
+      gradientUnits="userSpaceOnUse"
+      x1="100" y1="80"
+      x2="300" y2="230"
+    >
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ==================== BACKGROUND ==================== -->
+  <rect
+    x="0" y="0"
+    width="600" height="350"
+    fill="url(#bgGradient)"
+  />
+
+  <!-- ==================== TRELLIS LINES ==================== -->
+  <!-- Horizontal lines (y=80,130,180,230,280 from x=100→500) -->
+  <line x1="100" y1="80"  x2="500" y2="80"  stroke="#9bcf9e" stroke-width="4"/>
+  <line x1="100" y1="130" x2="500" y2="130" stroke="#9bcf9e" stroke-width="4"/>
+  <line x1="100" y1="180" x2="500" y2="180" stroke="#9bcf9e" stroke-width="4"/>
+  <line x1="100" y1="230" x2="500" y2="230" stroke="#9bcf9e" stroke-width="4"/>
+  <line x1="100" y1="280" x2="500" y2="280" stroke="#9bcf9e" stroke-width="4"/>
+
+  <!-- Vertical lines (x=100,200,300,400,500 from y=80→280) -->
+  <line x1="100" y1="80"  x2="100" y2="280" stroke="#9bcf9e" stroke-width="4"/>
+  <line x1="200" y1="80"  x2="200" y2="280" stroke="#9bcf9e" stroke-width="4"/>
+  <line x1="300" y1="80"  x2="300" y2="280" stroke="#9bcf9e" stroke-width="4"/>
+  <line x1="400" y1="80"  x2="400" y2="280" stroke="#9bcf9e" stroke-width="4"/>
+  <line x1="500" y1="80"  x2="500" y2="280" stroke="#9bcf9e" stroke-width="4"/>
+
+  <!-- ==================== "DATA COMET" PATH ==================== -->
+  <!-- This path travels along some horizontal & vertical lines, 
+       forming a stepping path across certain nodes. -->
+
+  <!-- Example path:
+       1. Start at (100,80)
+       2. Right to (200,80)
+       3. Down to (200,130)
+       4. Right to (300,130)
+       5. Down to (300,230)
+       6. Left to (200,230)
+       7. Down to (200,280)
+  -->
+  <path
+    d="M 100,80
+       L 200,80
+       L 200,130
+       L 300,130
+       L 300,230
+       L 200,230
+       L 200,280"
+    fill="none"
+    stroke="url(#cometStroke)"
+    stroke-width="10"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- ==================== NODES (METALLIC) ==================== -->
+  <!-- Place larger metallic circles at each point on the path. 
+       We'll add a subtle stroke around them for extra definition. -->
+
+  <!-- (100,80) -->
+  <circle
+    cx="100" cy="80" r="15"
+    fill="url(#metallicGradient)"
+    stroke="#ffffff" stroke-width="2"
+  />
+  <!-- (200,80) -->
+  <circle
+    cx="200" cy="80" r="15"
+    fill="url(#metallicGradient)"
+    stroke="#ffffff" stroke-width="2"
+  />
+  <!-- (200,130) -->
+  <circle
+    cx="200" cy="130" r="15"
+    fill="url(#metallicGradient)"
+    stroke="#ffffff" stroke-width="2"
+  />
+  <!-- (300,130) -->
+  <circle
+    cx="300" cy="130" r="15"
+    fill="url(#metallicGradient)"
+    stroke="#ffffff" stroke-width="2"
+  />
+  <!-- (300,230) -->
+  <circle
+    cx="300" cy="230" r="15"
+    fill="url(#metallicGradient)"
+    stroke="#ffffff" stroke-width="2"
+  />
+  <!-- (200,230) -->
+  <circle
+    cx="200" cy="230" r="15"
+    fill="url(#metallicGradient)"
+    stroke="#ffffff" stroke-width="2"
+  />
+  <!-- (200,280) -->
+  <circle
+    cx="200" cy="280" r="15"
+    fill="url(#metallicGradient)"
+    stroke="#ffffff" stroke-width="2"
+  />
+
+</svg>
